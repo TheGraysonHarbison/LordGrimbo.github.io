@@ -1,0 +1,59 @@
+/* Navbar */
+.not-active-page-text{
+    color: lightgray;
+    font-family: "Lato", sans-serif;
+}
+.not-active-page-text:hover{
+    color: white;
+}
+
+.active-page-text { 
+    color: white; 
+    font-weight: bold; 
+    font-family: "Lato", sans-serif;
+}
+.active-page-text:hover { 
+    color: lightgray; 
+    font-weight: bold; 
+} 
+
+.main-logo{
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: "Lato", sans-serif;
+}
+.main-logo:hover{
+    color: lightgray;
+}
+
+.btn{
+    fill: lightgray;
+    transition-duration: 3s;
+}
+.btn:hover{
+    fill: white;
+    transition-duration: 3s;
+}
+
+/* Background */
+body {
+    background-color: black;
+}
+
+.backdrop{
+    top: -22px;
+    translate: "middle";
+}
+
+/* Animation */
+.fade-in-opening{
+    opacity: 100%;
+    animation-delay: 1s;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
