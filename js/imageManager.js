@@ -18,7 +18,8 @@ const indexes = new Array(content.length);
 for (let i = 0; i < content.length; i++) {
 
     var name = content[i].name;
-    var path = content[i].thumbnailPath;
+    var desc = content[i].Description;
+    var thumb = content[i].thumbnailPath;
     var desc = content[i].Description;
     var id = 'imageID-' + (i+1);
 
@@ -28,7 +29,7 @@ for (let i = 0; i < content.length; i++) {
     //Add To Gallery
     var code = '<div class="mx-auto" style="width: 100%; position: relative;">\
     <a type="button" data-bs-toggle="modal" data-bs-target="#imageModal" id="'+id+'">\
-        <img src="' + path + '" id="imageresource" alt="" class="gallery-img">\
+        <img src="' + thumb + '" id="imageresource" alt="' + desc + '" class="gallery-img">\
         <div class="gallery-trans">\
             <div class="gallery-image-overlay"></div>\
             <div class="gallery-caption-block">\

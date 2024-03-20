@@ -11,6 +11,10 @@
     font-weight: bold; 
     font-family: "Lato", sans-serif;
 }
+.not-active-page-text:focus-visible{
+    outline: white solid 5px;
+}
+
 
 
 .active-page-text, .active-page-text:visited, .active-page-text:focus { 
@@ -27,6 +31,10 @@
     font-weight: bold; 
     font-family: "Lato", sans-serif;
 }
+.active-page-text:focus-visible{
+    outline: white solid 5px;
+}
+
 
 
 .main-logo, .main-logo:visited, .main-logo:focus{
@@ -41,11 +49,13 @@
 .main-logo:active{
     color: darkgrey;
 }
+.main-logo:focus-visible{
+    outline: white solid 5px;
+}
 
 
 .btn{
     fill: lightgray;
-    transition-duration: 3s;
 }
 .btn:hover{
     fill: white;
@@ -55,19 +65,30 @@
     fill: darkgray;
     transition-duration: 3s;
 }
+.btn:focus-visible{
+    outline: white solid 5px;
+}
+
 
 .side-menu-btn{
     fill: lightgray;
-    transition-duration: 3s;
+    outline-color: white;
+    transition-duration: .2s;
 }
 .side-menu-btn:hover{
     fill: white;
+    outline-color: white;
     transition-duration: 3s;
 }
 .side-menu-btn:active{
     fill: darkgray;
+    outline-color: white;
     transition-duration: 3s;
 }
+.side-menu-btn:focus-visible{
+    outline: white solid 5px;
+}
+
 
 /* Background */
 body {
@@ -112,6 +133,9 @@ body {
     color: darkgray;
     opacity: 1;
 }
+.scroll-btn:focus-visible{
+    outline: white solid 5px;
+}
 
 /* Side Menu */
 .side-menu-logo{
@@ -121,10 +145,17 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+.side-menu-logo:focus-visible{
+    outline: black, 5px;
+}
+
 .side-menu-link-btn{
     padding-right: 30%;
     fill: black;
-    transition-duration: 3s;
+    transition-duration: 0s;
+}
+.side-menu-link-btn:focus-visible{
+    outline: black solid 5px;
 }
 .side-menu-link-btn:hover{
     fill: gray;
@@ -135,12 +166,22 @@ body {
     transition-duration: 3s;
 }
 
+.side-menu-exit:focus-visible{
+    outline: black solid 5px;
+}
+
 /* Gallery */
 .gallery-grid{
     width: 90%;
     position: relative;
     left: 0;
     transform: translateY(-100px);
+}
+
+@media screen and (max-width: 600px) {
+    .gallery-grid{
+        transform: translateY(-0);
+    }
 }
 
 .gallery-trans{
