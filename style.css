@@ -1,5 +1,5 @@
 /* Navbar */
-.not-active-page-text, .not-active-page-text:visited, .not-active-page-text:focus{
+.not-active-page-text, .not-active-page-text:visited{
     color: lightgray;
     font-family: "Lato", sans-serif;
 }
@@ -11,10 +11,10 @@
     font-weight: bold; 
     font-family: "Lato", sans-serif;
 }
-.not-active-page-text:focus-visible{
+.not-active-page-text:focus-visible, .not-active-page-text:focus {
     outline: white solid 5px;
+    box-shadow: none !important;
 }
-
 
 
 .active-page-text, .active-page-text:visited, .active-page-text:focus { 
@@ -31,11 +31,10 @@
     font-weight: bold; 
     font-family: "Lato", sans-serif;
 }
-.active-page-text:focus-visible{
+.active-page-text:focus-visible, .active-page-text:focus {
     outline: white solid 5px;
+    box-shadow: none !important;
 }
-
-
 
 .main-logo, .main-logo:visited, .main-logo:focus{
     color: white;
@@ -49,34 +48,40 @@
 .main-logo:active{
     color: darkgrey;
 }
-.main-logo:focus-visible{
+.main-logo:focus-visible, .main-logo:focus {
     outline: white solid 5px;
+    box-shadow: none !important;
 }
 
 
 .btn{
-    fill: lightgray;
+    fill: white;
 }
 .btn:hover{
-    fill: white;
+    fill: lightgray;
     transition-duration: 3s;
 }
 .btn:active{
     fill: darkgray;
     transition-duration: 3s;
 }
-.btn:focus-visible{
+.btn:focus-visible, .btn:focus {
     outline: white solid 5px;
+    box-shadow: none !important;
 }
+
 
 
 .side-menu-btn{
-    fill: lightgray;
+    fill: white;
     outline-color: white;
     transition-duration: .2s;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    border-inline: 0%;
 }
 .side-menu-btn:hover{
-    fill: white;
+    fill: lightgray;
     outline-color: white;
     transition-duration: 3s;
 }
@@ -85,10 +90,10 @@
     outline-color: white;
     transition-duration: 3s;
 }
-.side-menu-btn:focus-visible{
+.side-menu-btn:focus-visible, .side-menu-btn:focus {
     outline: white solid 5px;
+    box-shadow: none !important;
 }
-
 
 /* Background */
 body {
@@ -133,9 +138,6 @@ body {
     color: darkgray;
     opacity: 1;
 }
-.scroll-btn:focus-visible{
-    outline: white solid 5px;
-}
 
 /* Side Menu */
 .side-menu-logo{
@@ -144,31 +146,53 @@ body {
     font-size: x-large;
     font-family: "Lato", sans-serif;
 }
+.side-menu-logo:hover{
+    color: rgb(90, 90, 90);
+}
+.side-menu-logo:active{
+    color: rgb(50, 50, 50);
+}
+.side-menu-logo:focus-visible, .side-menu-logo:focus {
+    outline: black solid 5px;
+    box-shadow: none !important;
+}
 
-.side-menu-logo:focus-visible{
-    outline: black, 5px;
+.side-menu-container{
+    max-width: 75%;
+    justify-content: start; 
+    margin-left: 5%; 
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 1%;
 }
 
 .side-menu-link-btn{
-    padding-right: 30%;
     fill: black;
     transition-duration: 0s;
-}
-.side-menu-link-btn:focus-visible{
-    outline: black solid 5px;
+    max-width: fit-content;
+    margin: 0;
+    padding: 0;
+    padding-inline: 0;
 }
 .side-menu-link-btn:hover{
-    fill: gray;
+    fill: rgb(90, 90, 90);
     transition-duration: 3s;
 }
 .side-menu-link-btn:active{
-    fill: darkgray;
+    fill: rgb(50, 50, 50);
     transition-duration: 3s;
 }
-
-.side-menu-exit:focus-visible{
+.side-menu-link-btn:focus-visible, .side-menu-link-btn:focus {
     outline: black solid 5px;
+    box-shadow: none !important;
 }
+
+
+.side-menu-exit:focus-visible, .side-menu-exit:focus {
+    outline: black solid 5px;
+    box-shadow: none !important;
+}
+
 
 /* Gallery */
 .gallery-grid{
@@ -286,4 +310,9 @@ body {
 
 .scale-for-mobile-text-big{
     font-size: 140%;
+}
+
+.test:focus-visible, .test:focus {
+    outline: red solid 2px;
+    box-shadow: none !important;
 }

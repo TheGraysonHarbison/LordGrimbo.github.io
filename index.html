@@ -12,18 +12,13 @@
     <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Top Navigation Bar">
         <div class="container-fluid prevent-select">
 
-            <ul class="navbar-nav d-flex flex-row mb-3 justify-content-start prevent-select aria-hidden">
+             <!-- Pages -->
+            <ul class="navbar-nav d-flex flex-row mb-3 justify-content-start prevent-select">
                 <li class="nav-item p-1 d-none d-sm-block">
-                    <a class="nav-link active-page-text prevent-select" href="#" aria-label="Home Page" role="button" data-toggle="tooltip" data-placement="bottom" title="Home Page">HOME</a>
-                </li>
-                <li class="nav-item p-1 d-none d-sm-block">
-                    <a class="nav-link not-active-page-text prevent-select" href="contact.html" aria-label="Contact Information" role="button" data-toggle="tooltip" data-placement="bottom" title="Contact Information">CONTACT</a>
+                    <a class="nav-link active-page-text prevent-select" href="contact.html" aria-label="Contact Information" role="button" data-toggle="tooltip" data-placement="bottom" title="Contact Information">CONTACT</a>
                 </li>
                 <li class="nav-item p-1 d-sm-none align-self-start">
-                    <a class="nav-link active-page-text prevent-select scale-for-mobile-text-big" href="#" aria-label="Home Page" role="button" data-toggle="tooltip" data-placement="bottom" title="Home Page">HOME</a>
-                </li>
-                <li class="nav-item p-1 d-sm-none align-self-start">
-                    <a class="nav-link not-active-page-text prevent-select scale-for-mobile-text-big" href="contact.html" role="button" aria-label="Contact Information" data-toggle="tooltip" data-placement="bottom" title="Contact Information">CONTACT</a>
+                    <a class="nav-link active-page-text prevent-select scale-for-mobile-text-big" href="contact.html" role="button" aria-label="Contact Information" data-toggle="tooltip" data-placement="bottom" title="Contact Information">CONTACT</a>
                 </li>
             </ul>
 
@@ -34,19 +29,19 @@
                 </div>
             </div>
             
-            <!-- Logo And Menu Buttons -->
-            <ul class="navbar-nav d-flex flex-row mb-3 justify-content-end"">
-                <li class="nav-item p-1 navbar-toggler">
+            <!-- Open Side Menu Button -->
+            <ul class="navbar-nav d-flex flex-row mb-3 justify-content-end">
+                <li class="nav-item p-1 navbar-toggler" style="border: 0">
                     <div class="d-none d-sm-block">
                         <a role="menu" aria-label="Open Side Menu" class="btn btn-link d-block d-md-inline-block side-menu-btn" data-bs-toggle="offcanvas" href="#sideMenu" data-toggle="tooltip" data-placement="bottom" title="Side Menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-list" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16" style="width: 45; height: 45;">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
                         </a>
                     </div>
                     <div class="d-sm-none">
                         <a role="menu" aria-label="Open Side Menu" class="btn btn-link d-block d-md-inline-block side-menu-btn" data-bs-toggle="offcanvas" href="#sideMenu" data-toggle="tooltip" data-placement="bottom" title="Side Menu">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" class="bi bi-list" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16" style="width: 30; height: 30;" >
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
                         </a>
@@ -98,7 +93,7 @@
     </nav>
 
     <!-- Background -->
-    <div class="view backdrop">
+    <div class="view backdrop" tabindex="1" >
 
         <div class="d-none d-lg-block">
             <img src="interface_UI/2048x1152-Label-Transparent.png" class="img-fluid backdrop-logo fade-in-opening prevent-select disabled-right-click">     
@@ -120,92 +115,38 @@
     </div>
 
     <!-- Side Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="1" id="sideMenu">
-        <div class = "d-none d-sm-block">
-            <div class="offcanvas-header" style="padding-bottom: inherit;">
-                <h1 class="offcanvas-title side-menu-logo"  role="heading" aria-label="Side Menu Title">Grayson Harbison</h1>
-                <button type="button" class="btn-close justify-content-end side-menu-exit" width="40" height="40" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="d-flex flex-row mb-3 justify-content-start" style="padding-left: 0%;">
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Youtube Channel" data-toggle="tooltip" data-placement="bottom" title="Youtube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-youtube" viewBox="0 0 16 16" href="index.html">
-                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html" role="link", aria-label="Visit X Account" data-toggle="tooltip" data-placement="bottom" title="X">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  class="bi bi-twitter-x" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Linked In Page" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="" class="btn side-menu-link-btn" href="index.html" role="link", aria-label="Visit Adobe Behance Profile" data-toggle="tooltip" data-placement="bottom" title="Adobe Behance">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  class="bi bi-behance" viewBox="0 0 16 16">
-                            <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Github Page" data-toggle="tooltip" data-placement="bottom" title="Github">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+    <div class="offcanvas offcanvas-end" tabindex="2" id="sideMenu">
+        <div class="offcanvas-header" style="padding-bottom: inherit;">
+            <a class="offcanvas-title side-menu-logo navbar-brand"  role="heading" aria-label="Side Menu Title" alt="Grayson Harbison" href="#">Grayson Harbison</a>
+            <button type="button" class="btn-close justify-content-end side-menu-exit" width="70" height="70" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class = "d-sm-none">
-            <div class="offcanvas-header" style="padding-bottom: inherit;">
-                <h1 class="offcanvas-title side-menu-logo scale-for-mobile-text-big" role="heading" aria-label="Side Menu Title">Grayson Harbison</h1>
-                <button type="button" class="btn-close justify-content-end side-menu-exit" width="70" height="70" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="d-flex flex-row mb-3 justify-content-start" style="padding-left: 0%;">
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html" role="link", aria-label="Visit Youtube Channel" data-toggle="tooltip" data-placement="bottom" title="Youtube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="bi bi-youtube" viewBox="0 0 16 16" href="index.html">
-                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit X Account" data-toggle="tooltip" data-placement="bottom" title="X">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Linked In Page" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"  class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="" class="btn side-menu-link-btn" href="index.html" role="link", aria-label="Visit Adobe Behance Profile" data-toggle="tooltip" data-placement="bottom" title="Adobe Behance">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"  class="bi bi-behance" viewBox="0 0 16 16">
-                            <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="p-1">
-                    <a type="button" class="btn side-menu-link-btn" href="index.html" href="index.html"  role="link", aria-label="Visit Github Page" data-toggle="tooltip" data-placement="bottom" title="Github">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" class="bi bi-github" viewBox="0 0 16 16">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
+        <div class="container-start side-menu-container">
+            <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Youtube Channel" data-toggle="tooltip" data-placement="bottom" title="Youtube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-youtube" viewBox="0 0 16 16" href="index.html">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
+                </svg>
+            </a>
+            <a type="button" class="btn side-menu-link-btn" href="index.html" role="link", aria-label="Visit X Account" data-toggle="tooltip" data-placement="bottom" title="X">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"  class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                </svg>
+            </a>
+            <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Linked In Page" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"  class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+            </a>
+            <a type="button" class="btn side-menu-link-btn" href="index.html" role="link", aria-label="Visit Adobe Behance Profile" data-toggle="tooltip" data-placement="bottom" title="Adobe Behance">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"  class="bi bi-behance" viewBox="0 0 16 16">
+                    <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"/>
+                </svg>
+            </a>
+            <a type="button" class="btn side-menu-link-btn" href="index.html"  role="link", aria-label="Visit Github Page" data-toggle="tooltip" data-placement="bottom" title="Github">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            </a>
+
         </div>
     </div>
 
@@ -213,12 +154,12 @@
     <div class="container-fluid gallery-grid" id="middle">
         <div class="row gallery-row">
             <div class="col gallery-column" id="gallery-col-1">
-                <div class="mx-auto" style="width: 100%; position: relative;">\
+                <div class="mx-auto" style="width: 100%; position: relative;">
                     <a type="button" data-bs-toggle="modal" data-bs-target="#imageModal" id="">
                         <img src="content/PancakeStill_HD.png" id="imageresource" alt="" class="gallery-img">
-                        <div class="gallery-trans">\
-                            <div class="gallery-image-overlay"></div>\
-                            <div class="gallery-caption-block">\
+                        <div class="gallery-trans">
+                            <div class="gallery-image-overlay"></div>
+                            <div class="gallery-caption-block">
                                 <p class="gallery-caption prevent-select"></p>
                             </div>
                         </div>
@@ -231,7 +172,7 @@
     </div>
 
   <!-- Image Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal fade" id="imageModal" tabindex="3" aria-labelledby="imageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
