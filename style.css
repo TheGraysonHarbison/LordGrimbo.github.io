@@ -1,4 +1,5 @@
 /* Navbar */
+
 .not-active-page-text, .not-active-page-text:visited{
     color: lightgray;
     font-family: "Lato", sans-serif;
@@ -100,43 +101,72 @@ body {
     background-color: black;
 }
 
-.backdrop{
-    transform: translateY(-50px);
+.bg-image{
+    background-image: url("interface_UI/2048x1152-NoLabel.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
 }
 
+@media screen and (max-width: 800px) {
+    .bg-image {
+        background-image: url("interface_UI/md-NoLabel.png");
+    }
+}
+
+
 .backdrop-logo{
-    position: absolute;
+    color: white;
+    font-size: 12vh;
+    font-weight: bold; 
+    text-shadow: 0 0 10vh #fff;
+    font-family: "Lato", sans-serif;
+    text-overflow: clip;
 }
 
 .scroll-btn-square{
-    position: absolute;
-    top: 70%;
-    left: 45%;
-    translate: middle;
-
-    height:0;
-    width:10%;
-    padding-bottom:10%;
+    width: 10%;
 }
 
-.scroll-btn, .scroll-btn:visited, .scroll-btn:focus{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-
+.scroll-btn{
     color: lightgray;
     opacity: .6;
+    border-radius: 100%;
+    outline: none;
+    box-shadow: none !important;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    padding-inline: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 8vw;
 }
 .scroll-btn:hover{
     color: white;
     opacity: 1;
+    outline: white solid 5px;
+    box-shadow: none !important;
 }
 .scroll-btn:active{
     color: darkgray;
     opacity: 1;
+}
+.scroll-btn:focus, .scroll-btn:focus-visible{
+    color: darkgray;
+    opacity: 1;
+    outline: white solid 5px;
+    box-shadow: none !important;
 }
 
 /* Side Menu */
@@ -144,6 +174,8 @@ body {
     color: black;
     font-weight: bold;
     font-size: x-large;
+    max-width: fit-content;
+    text-overflow: clip;
     font-family: "Lato", sans-serif;
 }
 .side-menu-logo:hover{
@@ -157,13 +189,14 @@ body {
     box-shadow: none !important;
 }
 
-.side-menu-container{
+.side-menu-link-container{
     max-width: 75%;
     justify-content: start; 
+    margin-top: 2.5%; 
     margin-left: 5%; 
     display: flex; 
     flex-wrap: wrap;
-    gap: 1%;
+    gap: 2.5%;
 }
 
 .side-menu-link-btn{
@@ -198,14 +231,9 @@ body {
 .gallery-grid{
     width: 90%;
     position: relative;
+    background-color: burlywood;
     left: 0;
-    transform: translateY(-100px);
-}
-
-@media screen and (max-width: 600px) {
-    .gallery-grid{
-        transform: translateY(-0);
-    }
+    transform: translateY(-10vh);
 }
 
 .gallery-trans{
