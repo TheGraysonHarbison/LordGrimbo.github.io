@@ -32,12 +32,15 @@
                         var op = 0;
                         var mop = 0;
 
-                        if(y >= 300){
-                            mop = (y - 300) / (500 - 300);
+                        const begin = (window.innerHeight * 0.2);
+                        const end = (window.innerHeight * 0.4);
+
+                        if(y >= begin){
+                            mop = (y - begin) / (end - begin);
                             op = mop;
                             mop = Math.min(op, 0.85);
                         }
-                        else if (y > 500){
+                        else if (y > end){
                             mop = 0.85;
                             op = 1;
                         }
@@ -164,24 +167,25 @@
     </div>
 
     <!-- Gallery -->
-    <div class="container-fluid gallery-grid" id="middle">
-        <div class="row gallery-row">
-            <div class="col gallery-column" id="gallery-col-1">
-                <div class="mx-auto" style="width: 100%; position: relative;">
-                    <a type="button" data-bs-toggle="modal" data-bs-target="#imageModal" id="">
-                        <img src="content/PancakeStill_HD.png" id="imageresource" alt="" class="gallery-img">
-                        <div class="gallery-trans">
-                            <div class="gallery-image-overlay"></div>
-                            <div class="gallery-caption-block">
-                                <p class="gallery-caption prevent-select"></p>
-                            </div>
-                        </div>
-                    </a>
+    <div class="d-flex flex-row justify-content-center align-items-start gallery-grid mx-auto" id="middle">   
+        <div class="d-flex flex-column mb-3" style="width: 100%; gap: 1vh;">
+            <a href="#" class="gallery-item position-relative">
+                <img src="content/PancakeStill_HD.png" class="gallery-img">
+
+                <div class="gallery-card position-absolute bottom-0 start-50 translate-middle-x">
+                    <p class="gallery-caption">Hello My Baby Hello My Hunny.</p>
                 </div>
-            </div>
-            <div class="col gallery-column" id="gallery-col-2">
-            </div>
+            </a>
         </div>
+        <div class="d-flex flex-column mb-3" style="width: 100%; gap: 1vh;">
+        </div>
+    </div>
+
+    <!-- Back To Top -->
+    <div class="scroll-btn-square ratio ratio-1x1 scroll-up-btn-p">
+        <a type="button" class="btn scroll-up-btn text-center" href="#top" role="button" alt = "Scroll To Content Button.">
+            <span class="bi bi-chevron-compact-up"></span>
+        </a>
     </div>
 
   <!-- Image Modal -->
