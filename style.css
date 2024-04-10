@@ -335,13 +335,17 @@ body {
 
 
 .scroll-up-btn-p{
+    width: 5%;
     position: fixed;
-    left: 85vw;
-    top: 75vh;
+    left: 90vw;
+    top: 80vh;
+
+    display: none;
 }
 
 .scroll-up-btn{
     color: lightgray;
+    background-color: rgba(0,0,0,.5);
     opacity: 1;
     border-radius: 100%;
     outline: none;
@@ -356,13 +360,14 @@ body {
     justify-content: center;
     text-align: center;
 
-    font-size: 8vw;
+    font-size: 4vw;
 }
 .scroll-up-btn:hover{
     color: white;
     opacity: 1;
     outline: white solid 5px;
     box-shadow: none !important;
+    background-color: rgb(0,0,0, 1);
 }
 .scroll-up-btn:active{
     color: darkgray;

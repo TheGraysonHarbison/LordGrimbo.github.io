@@ -60,14 +60,14 @@
             <ul class="navbar-nav d-flex flex-row mb-3 justify-content-end">
                 <li class="nav-item p-1 navbar-toggler" style="border: 0">
                     <div class="d-none d-sm-block">
-                        <a role="menu" aria-label="Open Side Menu" class="btn btn-link d-block d-md-inline-block side-menu-btn" data-bs-toggle="offcanvas" href="#sideMenu" data-toggle="tooltip" data-placement="bottom" title="Side Menu">
+                        <a role="menu" aria-label="Open Side Menu" class="btn btn-link d-block d-md-inline-block side-menu-btn" data-bs-toggle="offcanvas" href="#sideMenu" data-toggle="tooltip" data-placement="bottom" title="Side Menu" aria-haspopup="menu">
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16" style="width: 45; height: 45;">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
                         </a>
                     </div>
                     <div class="d-sm-none">
-                        <a role="menu" aria-label="Open Side Menu" class="btn btn-link d-block d-md-inline-block side-menu-btn" data-bs-toggle="offcanvas" href="#sideMenu" data-toggle="tooltip" data-placement="bottom" title="Side Menu">
+                        <a role="menu" aria-label="Open Side Menu" class="btn btn-link d-block d-md-inline-block side-menu-btn" data-bs-toggle="offcanvas" href="#sideMenu" data-toggle="tooltip" data-placement="bottom" title="Side Menu" aria-haspopup="menu">
                             <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-list" viewBox="0 0 16 16" style="width: 30; height: 30;" >
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                             </svg>
@@ -123,7 +123,7 @@
     <div class="bg-image">
         <h2 class="backdrop-logo fade-in-opening" role="heading" aria-level="2">See My Work</h2>
         <div class="scroll-btn-square ratio ratio-1x1 fade-in-scroll">
-            <button type="button" class="btn scroll-btn text-center" onClick="document.getElementById('middle').scrollIntoView()"  role="button" alt = "Scroll To Content Button.">
+            <button type="button" class="btn scroll-btn text-center" onClick="document.getElementById('middle').scrollIntoView()"  role="button" aria-label = "Scroll To Content Button.">
                 <span class="bi bi-chevron-compact-down"></span>
             </button>
         </div>
@@ -169,40 +169,62 @@
     <!-- Gallery -->
     <div class="d-flex flex-row justify-content-center align-items-start gallery-grid mx-auto" id="middle">   
         <div class="d-flex flex-column mb-3" style="width: 100%; gap: 1vh;">
-            <a href="#" class="gallery-item position-relative">
-                <img src="content/PancakeStill_HD.png" class="gallery-img">
+            <a href="" class="gallery-item position-relative" role="dialog" aria-haspopup="dialog"  data-bs-toggle="modal" data-bs-target="#imageModal">
+                <img src="content/PancakeStill_HD.png" class="gallery-img prevent-select" role="img" alt="An Image of a Pancake Factory.">
 
                 <div class="gallery-card position-absolute bottom-0 start-50 translate-middle-x">
-                    <p class="gallery-caption">Hello My Baby Hello My Hunny.</p>
+                    <p class="gallery-caption">Pancake Factory</p>
                 </div>
             </a>
         </div>
         <div class="d-flex flex-column mb-3" style="width: 100%; gap: 1vh;">
+            <a href="#" class="gallery-item position-relative" role="dialog" aria-haspopup="dialog">
+                <img src="content/PancakeStill_HD.png" class="gallery-img prevent-select" role="img" alt="An Image of a Pancake Factory.">
+
+                <div class="gallery-card position-absolute bottom-0 start-50 translate-middle-x">
+                    <p class="gallery-caption">Pancake Factory</p>
+                </div>
+            </a>
         </div>
     </div>
 
     <!-- Back To Top -->
-    <div class="scroll-btn-square ratio ratio-1x1 scroll-up-btn-p">
-        <a type="button" class="btn scroll-up-btn text-center" href="#top" role="button" alt = "Scroll To Content Button.">
+    <div class="scroll-up-btn-p ratio ratio-1x1" id ="suBtn">
+        <a type="button" class="btn scroll-up-btn text-center" href="#top" role="button" aria-label = "Scroll To Top.">
             <span class="bi bi-chevron-compact-up"></span>
         </a>
     </div>
 
-  <!-- Image Modal -->
-  <div class="modal fade" id="imageModal" tabindex="3" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="modalLabel">Modal title</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <script>
+        let scrollUpBtn = document.getElementById("suBtn");
+
+        window.onscroll = function() {showScrollCheck()};
+
+        function showScrollCheck() {
+            if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+                scrollUpBtn.style.display = "block";
+            } else {
+                scrollUpBtn.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="imageModalLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              CONTENT
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Open</button>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-            <img src="" id="imageresource" class="gallery-img">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
     </div>
-  </div>
 </html>
