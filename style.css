@@ -55,18 +55,18 @@
 }
 
 
-.btn{
+.navLinkBtn{
     fill: white;
 }
-.btn:hover{
+.navLinkBtn:hover{
     fill: lightgray;
     transition-duration: 3s;
 }
-.btn:active{
+.navLinkBtn:active{
     fill: darkgray;
     transition-duration: 3s;
 }
-.btn:focus-visible, .btn:focus {
+.navLinkBtn:focus-visible, .navLinkBtn:focus {
     outline: white solid 5px;
     box-shadow: none !important;
 }
@@ -252,6 +252,11 @@ body {
     border-radius: 1vw;
     overflow: hidden;
 
+    background-color: none;
+
+    border: 0px;
+    padding-inline: 0px;
+    padding: 0px;
     transition: outline .2s;
 }
 .gallery-item:hover{
@@ -269,11 +274,12 @@ body {
 .gallery-img{
     width: 100%;
     transition: transform 0.5s;
+    transform: scale(100%);
 }
 .gallery-item:hover .gallery-img{
     transform: scale(101%);
 }
-.gallery-item:focus-visible, .gallery-item:focus .gallery-img{
+.gallery-item:focus-visible .gallery-img, .gallery-item:focus .gallery-img{
     transform: scale(101%);
 }
 
@@ -289,6 +295,7 @@ body {
     transition: opacity 0.2s;
     
     text-overflow: ellipsis;
+    text-align: start;
     font-size: 1.4rem;
 }
 .gallery-item:hover .gallery-card{
@@ -377,6 +384,116 @@ body {
     color: darkgray;
     opacity: 1;
     outline: white solid 5px;
+    box-shadow: none !important;
+}
+
+
+/* Modal */
+.imageModalTitle{
+    color: black;
+    font-weight: bold;
+    font-size: x-large;
+    font-family: "Lato", sans-serif;
+}
+
+
+.modal-img{
+    width: 100%;
+}
+
+
+.plain-btn{
+    display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	color: #fff;
+    background-color: green;
+}
+
+
+.bhModalBtn{
+    color: white;
+    background-color: rgb(62, 78, 180);
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    display: block;
+}
+.bhModalBtn:hover{
+    transition: 0.2s;
+
+    color: white;
+    background-color: rgb(52, 68, 170);
+}
+.bhModalBtn:focus-visible{
+    color: white;
+    background-color: rgb(62, 78, 180);
+    outline: rgb(42, 58, 150) solid 5px;
+}
+.bhModalBtn:active{
+    color: white;
+    background-color: rgb(42, 58, 150);
+    outline: rgb(42, 58, 150) solid 5px;
+    box-shadow: inset 0px 0px 0px 2px white;
+}
+.bhModalBtn-disabled{
+    color: white;
+    background-color: rgb(120, 120, 120);
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+}
+
+
+.closeModalBtn{
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    display: block;
+}
+.closeModalBtn:hover{
+    transition: 0.2s;
+
+    color: white;
+    background-color: rgb(90, 90, 90);
+}
+.closeModalBtn:focus-visible{
+    color: white;
+    background-color: rgb(50, 50, 50);
+    outline: black solid 5px;
+    box-shadow: inset 0px 0px 0px 2px white;
+}
+.closeModalBtn:active{
+    color: white;
+    background-color: rgb(50, 50, 50);
+    box-shadow: none !important;
+    outline: black solid 5px;
+}
+
+
+.modalClose{
+    fill: black;
+    opacity: 1;
+    transition: 0.2s;
+}
+.modalClose:hover{
+    color: rgb(90, 90, 90);
+    opacity: 1;
+}
+.modalClose:active{
+    fill: rgb(50, 50, 50);
+    opacity: 1;
+    outline: black solid 5px;
+    box-shadow: none !important;
+}
+.modalClose:focus-visible{
+    outline: black solid 5px;
     box-shadow: none !important;
 }
 
