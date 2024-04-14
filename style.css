@@ -67,6 +67,7 @@
     transition-duration: 3s;
 }
 .navLinkBtn:focus-visible, .navLinkBtn:focus {
+    fill: lightgray;
     outline: white solid 5px;
     box-shadow: none !important;
 }
@@ -222,6 +223,7 @@ body {
     transition-duration: 3s;
 }
 .side-menu-link-btn:focus-visible, .side-menu-link-btn:focus {
+    fill: rgb(90, 90, 90);
     outline: black solid 5px;
     box-shadow: none !important;
 }
@@ -478,23 +480,94 @@ body {
 
 
 .modalClose{
-    fill: black;
+    color: black;
     opacity: 1;
     transition: 0.2s;
+
+    width: 3.2rem !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 3.2rem !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 2rem !important;
+
+    box-shadow: none !important;
 }
 .modalClose:hover{
     color: rgb(90, 90, 90);
     opacity: 1;
 }
 .modalClose:active{
-    fill: rgb(50, 50, 50);
+    color: rgb(50, 50, 50);
     opacity: 1;
     outline: black solid 5px;
     box-shadow: none !important;
 }
 .modalClose:focus-visible{
+    color: rgb(90, 90, 90);
     outline: black solid 5px;
     box-shadow: none !important;
+}
+
+
+/* Contact Modal */
+.contactModalHeader{
+    color: black;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+}
+
+
+.contactModalText{
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: x-large;
+
+    transform: translateY(-0rem);
+    padding-left: .7rem;
+}
+.contactModalText:focus-visible{
+    outline: black solid 5px;
+    box-shadow: none !important;
+    border: 0px;
+}
+
+.contactLinkBox{
+    transform: translateY(-.5rem);
+    padding-left: 0.3rem;
+}
+
+
+.contactModalLink{
+    color: black;
+    transition: hover 0.2s;
+
+    width: 3.2rem !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: 3.2rem !important;
+    text-align: center;
+    padding: 0px;
+    font-size: 2rem !important;
+
+    box-shadow: none !important;
+    border: 0px;
+}
+.contactModalLink:hover{
+    color: rgb(90, 90, 90);
+}
+.contactModalLink:active{
+    fill: rgb(50, 50, 50);
+    outline: black solid 5px;
+    box-shadow: none !important;
+    border: 0px;
+}
+.contactModalLink:focus-visible{
+    fill: rgb(90, 90, 90);
+    outline: black solid 5px;
+    box-shadow: none !important;
+    border: 0px;
 }
 
 
