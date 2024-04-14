@@ -3,8 +3,9 @@
 //Dictionary
 //["Title", "pathToImage", "label", "hasBehance", "behanceLink"]
 var dict = {
-    pancakeFactory: {title : "Pancake Factory", imgPath : "content\\PancakeStill_HD.png", imgLabel : "A Factory That Makes Pancakes.", hasBehance : true, behanceLink : "https://www.google.com/"},
-    pokeball: {title : "Ancient Pokeball", imgPath : "content\\Pokeball\\PokeBall_HD.png", imgLabel : "A Render of an Ancient Pokeball.", hasBehance : false, behanceLink : ""},
+    pancakeFactory: {title : "Pancake Factory", imgPath : "content\\Pancake\\PancakeHD.gif", imgLabel : "A Gif showing Factory That Makes Pancakes.", hasBehance : true, behanceLink : "https://www.behance.net/gallery/193822483/Pancake-Factory"},
+    pokeball: {title : "Ancient Pokeball", imgPath : "content\\Pokeball\\PokeBall_HD.png", imgLabel : "An image of an Ancient Pokeball.", hasBehance : true, behanceLink : "https://www.behance.net/gallery/193821073/Ancient-Pokeball"},
+    snowmen: {title : "Claymation Snowman", imgPath : "content\\Snowman\\SnowmanHD.gif", imgLabel : "A Gif showing two clay snowmen.", hasBehance : true, behanceLink : "https://www.behance.net/gallery/192274157/Snowy-Night"},
 };
 
 
@@ -37,6 +38,7 @@ function updateModal(key){
         modalBehanceButton.ariaDisabled = false;
         modalBehanceButton.title = "Go To Behance Page.";
         modalBehanceButton.style = "pointer-events:auto";
+        modalBehanceButton.innerHTML = '<i class="bi bi-behance"></i> See On Behance';
     }
     else{
         modalBehanceButton.classList = ["plain-btn bhModalBtn-disabled"];
@@ -45,5 +47,6 @@ function updateModal(key){
         modalBehanceButton.ariaDisabled = true;
         modalBehanceButton.title = "";
         modalBehanceButton.style = "pointer-events:none";
+        modalBehanceButton.textContent = "Disabled"
     }
 }
