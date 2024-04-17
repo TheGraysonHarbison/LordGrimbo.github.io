@@ -122,19 +122,39 @@ body {
 }
 
 
-.backdrop-logo{
+.backdrop-lines{
+    font-size: 5vh;
     color: white;
-    font-size: 12vh;
-    font-weight: bold; 
-    text-shadow: 0 0 10vh #fff;
     font-family: "Lato", sans-serif;
-    text-overflow: clip;
+
+    text-align: center;
+
+
+    top: 3vh;
+    max-height: 75vh;
+    position: relative;
+}
+
+.backdrop-lines-big{
+    font-size: 7vh;
 }
 
 @media screen and (max-width: 850px) {
-    .backdrop-logo{
-        font-size: 10vw;
+    .backdrop-lines{
+        font-size: 4vh;
     }
+
+    .backdrop-lines-big{
+        font-size: 6vh;
+    }
+}
+
+
+.lil-glow{
+    text-shadow: 0 0 5vh #fff;
+}
+.big-glow{
+    text-shadow: 0 0 9vh #fff;
 }
 
 .scroll-btn-square{
@@ -400,8 +420,31 @@ body {
 
 
 .modal-img{
+    margin: 0 auto;
     width: 100%;
+    object-fit: cover;
 }
+
+
+.carousel-tab:focus-visible{
+    outline: white solid 5px;
+    opacity: 1;
+}
+.carousel-tab:active{
+    outline: white solid 5px;
+    opacity: 1;
+}
+
+
+.cNav-parent:active .carousel-nav{
+    outline: white solid 5px !important;
+    opacity: 1;
+}
+.cNav-parent:focus-visible .carousel-nav{
+    outline: white solid 5px !important;
+    opacity: 1;
+}
+
 
 
 .plain-btn{
@@ -444,6 +487,40 @@ body {
     box-shadow: inset 0px 0px 0px 2px white;
 }
 .bhModalBtn-disabled{
+    color: white;
+    background-color: rgb(120, 120, 120);
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+}
+
+
+.itchModalBtn{
+    color: white;
+    background-color: rgb(163, 0, 73);
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    display: block;
+}
+.itchModalBtn:hover{
+    transition: 0.2s;
+
+    color: white;
+    background-color: rgb(143, 0, 63);
+}
+.itchModalBtn:focus-visible{
+    color: white;
+    background-color: rgb(163, 0, 73);
+    outline: rgb(133, 0, 53) solid 5px;
+}
+.itchModalBtn:active{
+    color: white;
+    background-color: rgb(133, 0, 53);
+    outline: rgb(133, 0, 53) solid 5px;
+    box-shadow: inset 0px 0px 0px 2px white;
+}
+.itchModalBtn-disabled{
     color: white;
     background-color: rgb(120, 120, 120);
     font-weight: bold;
@@ -574,12 +651,12 @@ body {
 /* Animation */
 .fade-in-opening{
     opacity: 1;
-    animation: fadeInLogo 3s;
+    animation: fadeInLogo 1s;
 }
 
 @keyframes fadeInLogo {
     0% { opacity: 0; }
-    16.6% { opacity: 0; }
+    35% { opacity: 0; }
     100% { opacity: 1; }
 }
 
@@ -590,7 +667,7 @@ body {
 
 @keyframes fadeInScroll {
     0% { opacity: 0; }
-    60% { opacity: 0; }
+    50% { opacity: 0; }
     100% { opacity: 1; }
 }
 
