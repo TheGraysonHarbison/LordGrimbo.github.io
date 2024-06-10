@@ -38,6 +38,16 @@ var dict = {
             externalType : "Itch", 
             externalLink : "https://graysonharbison.itch.io/voxel-demo"
         },
+    pickle: {
+            title : "Pickle Jesus", 
+            content : [
+                {path : "content\\PickleJesus\\PickleJesus-HD.png", label : "An Image of Jesus Christ, But as a Pickle."},
+                {path : "content\\PickleJesus\\PickleJesus_Non-Render-HD.png", label : "Behind the Scenes of Pickle Jesus."},
+                {path : "content\\PickleJesus\\PickleJesus-Photoshoot-HD.png", label : "Pickle Jesus Photoshoot Still."},
+            ],
+            externalType : "Behance", 
+            externalLink : "https://www.behance.net/gallery/200678283/Pickle-Jesus"
+        },
 };
 
 
